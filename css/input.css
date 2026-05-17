@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Shippori+Mincho&display=swap');
+
+@import 'tailwindcss';
+
+@theme {
+  --font-mincho: 'Shippori Mincho', serif;
+  --font-serif: 'Cormorant Garamond', serif;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@utility animate-slide-in {
+  animation: slide-in 50s linear infinite;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+.main-visual {
+  background-image: url('/img/main.webp');
+}
+
+.about-bg {
+  background-image: url('/img/cheese_bg.webp');
+}
